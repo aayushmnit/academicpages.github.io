@@ -109,6 +109,12 @@
       {% if author.wikipedia %}
         <li><a href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}"><i class="fa fa-fw fa-chain" aria-hidden="true"></i> Wikipedia</a></li>
       {% endif %}
+      {% if author.kaggle %}
+        <li><a href="https://www.kaggle.com/{{ author.kaggle }}"><i class="fa fa-fw fa-Kaggle" aria-hidden="true"></i> Kaggle</a></li>
+      {% endif %}
+      {% if author.analytics_vidhya %}
+        <li><a href="https://datahack.analyticsvidhya.com/user/profile/{{ author.analytics_vidhya }}"><i class="fa fa-fw fa-av" aria-hidden="true"></i> Analytics Vidhya</a></li>
+      {% endif %}
     </ul>
   </div>
 </div>
