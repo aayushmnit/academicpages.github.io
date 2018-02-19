@@ -78,7 +78,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Aayush"
+  name             : "Aayush Agrawal"
   avatar           : "profile.jpg"
   bio              : "I am a data scientist focused on solving business problems using data and math."
   location         : "Minneapolis, Minnesota, USA"
@@ -90,14 +90,14 @@ author:
   codepen          :
   dribbble         :
   flickr           :
-  facebook         :
+  facebook         : 
   foursquare       :
   github           : "aayushmnit"
   google_plus      :
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         : "/aayushmnit/"
+  linkedin         : "aayushmnit"
   orcid            : 
   pinterest        :
   soundcloud       :
@@ -110,6 +110,8 @@ author:
   xing             :
   youtube          :
   wikipedia        :
+  kaggle           : "aayushmnit"
+  analytics_vidhya : "aayushmnit"
 
 
 # Reading Files
