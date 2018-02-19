@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Aayush Agrawal"
+title                    : "Aayush Agrawal's website"
 title_separator          : "-"
 name                     : &name "Aayush Agrawal"
 description              : &description "I am a Data scientist"
@@ -78,13 +78,13 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Sidebar Name"
-  avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
-  location         : "Location"
-  employer         :
-  googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            :
+  name             : "Aayush Agrawal"
+  avatar           : "profile.jpg"
+  bio              : "I am a data scientist focussed on solving business problems using data and math."
+  location         : "Minneapolis, Minnesota, USA"
+  employer         : "Land O' Lakes, Inc.
+  googlescholar    : 
+  email            : "aayushmnit@gmail.com"
   uri              :
   bitbucket        :
   codepen          :
@@ -92,19 +92,19 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "academicpages"
+  github           : "aayushmnit"
   google_plus      :
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         :
-  orcid            : "http://orcid.org/yourorcidurl"
+  linkedin         : "https://www.linkedin.com/in/aayushmnit/"
+  orcid            : 
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  twitter          : "aayushmnit"
   vine             :
   weibo            :
   xing             :
