@@ -80,7 +80,7 @@ analytics:
 author:
   name             : "Aayush"
   avatar           : "profile.jpg"
-  bio              : "I am a data scientist focussed on solving business problems using data and math."
+  bio              : "I am a data scientist focused on solving business problems using data and math."
   location         : "Minneapolis, Minnesota, USA"
   employer         : "Land O' Lakes, Inc."
   googlescholar    : 
@@ -97,7 +97,7 @@ author:
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         : "https://www.linkedin.com/in/aayushmnit/"
+  linkedin         : "/aayushmnit/"
   orcid            : 
   pinterest        :
   soundcloud       :
