@@ -16,4 +16,4 @@ Presentation and codes on "Introduction of Keras". This was material presented b
 
 Photo of me presenting a real time object detection application using deep learning and openCV.
 
-<img style="width: 650px;" src="https://github.com/aayushmnit/Data-science-presentation/blob/master/Introduction%20to%20Keras/600_464528068.jpeg">
+<img src="https://github.com/aayushmnit/Data-science-presentation/blob/master/Introduction%20to%20Keras/600_464528068.jpeg?raw=true">
