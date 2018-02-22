@@ -17,25 +17,25 @@ Education
 Work experience
 ======
 * **Land O’ Lakes Inc., Shoreview, MN**
-	* **Data scientist – Big Data                               06/17 – Present**
+	* **Data scientist – Big Data,                              	06/17 – Present**
 		* Built a machine learning based targeting strategy for finding the best operators to target out of 1.6 Million operators, leading to 7x increase on sales returns from the previously used method using Python, Hive, Power BI and Apache NiFi
 		* Running marketing mix models for animal feed categories to understand effectiveness of various marketing activities
 		* Working on data collection and image processing process to solve image vision problems using Deep learning in multiple use cases relating to tracking sustainability practices and animal health
-	* **Data Science Intern                                     01/17 – 05/17**
+	* **Data Science Intern,                                     01/17 – 05/17**
 		* Enhancing corn yields for farmers by improving seed recommendations using a customized growing condition based similarity metrics devised by combining open source datasets for over 2.07 million farms using Python and ArcGIS
 
 * **Serendipity Infolabs Pvt. Ltd (Taxiforsure.com), Jaipur, India**
-	* **Senior Business Analyst                                 03/15 – 05/16**
+	* **Senior Business Analyst,                                 03/15 – 05/16**
 		* Designed supply scheme with Regional head to cut down per trip cost by 50% in 3 months from INR 130 to INR 60
 		* Designed an active cab prediction system to balance demand and supply, reducing cab rejection from 5% to 1%
 		* Developed fraud detection model and automated penalty imposing system saving $300,000 annually using Hive and Python
 		* Automated reporting of customized queries, reducing report generation from 4 hours to 1 hour in R
 * **Jasper Infotech Pvt. Ltd (Snapdeal.com), New Delhi, India**
-	* **Product Data Analyst                                    11/14 – 03/15**
+	* **Product Data Analyst,                                    11/14 – 03/15**
 		* Generated reports on mobile application, analyzed user flow and interactions for better understanding of website traffic; delivered findings to Product Manager team to inform future enhancements to app using Adobe Omniture
 		* Predicted conversion rates using R based on various business parameters for better inventory and technical planning
 * **Mu Sigma Business Solutions Pvt. Ltd, Bangalore, India**
-	* **Trainee Decision Scientist                              06/13 – 10/14**
+	* **Trainee Decision Scientist,                              06/13 – 10/14**
 		* Analyzed relationships among pharmacies, accounts, physicians at retail and non-retail level by leveraging commercial and internal data sources using SAS and built a Qlikview dashboard to identify key influencer in the network
 		* Organized 3rd party demand forecasts from 5 different sources; merged, sorted and semantically reconcile unrelated data by category using string matching algorithms for World’s largest retailer
 
