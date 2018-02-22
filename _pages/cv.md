@@ -11,16 +11,18 @@ redirect_from:
 
 Education
 ======
-* B.S. in Github, Github University, 2012
-* M.S. in Jekyll, Github University, 2014
-* Ph.D in Version Control Theory, Github University, 2018 (expected)
+* M.S. in Business Analytics, Carlson School of Management, Univeristy of Minnesota,Minneapolis, USA, 2017
+* B.Tech. in Electrical Engineering, Malaviya National Institute of Technology, Jaipur, India, 2013
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* **Land O’ Lakes Inc., Shoreview, MN**
+	* **Data scientist – Big data team						06/17 – Present**
+		* Built a machine learning based targeting strategy for finding the best operators to target out of 1.6 Million operators, leading to 7x increase on sales returns from the previously used method using Python, Hive, Power BI and Apache NiFi
+		* Running marketing mix models for animal feed categories to understand effectiveness of various marketing activities
+		* Working on data collection and image processing process to solve image vision problems using Deep learning in multiple use cases relating to tracking sustainability practices and animal health
+	* **Data Science Intern**								01/17 – 05/17 
+		* Enhancing corn yields for farmers by improving seed recommendations using a customized growing condition based similarity metrics devised by combining open source datasets for over 2.07 million farms using Python and ArcGIS
 
 * Fall 2015: Research Assistant
   * Github University
