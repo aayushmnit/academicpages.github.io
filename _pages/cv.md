@@ -41,11 +41,11 @@ Work experience
 
 Data Science Competitions
 ======
-* [Baseball Analytics](https://carlsonschool.umn.edu/news/msba-team-shows-prowess-in-analyzing-baseball-stats): *Popularity Vote Award* - Predicted Fanduel points in Baseball for every Hitter pitcher combination per game of 2016 season using ensemble model of linear regression, random forest and gradient boosted trees in Python
-* [Water Data Analysis](http://minneanalytics.org/diving-into-water-data-the-outcomes-of-minnemudac/): *Analytical Acumen award* - Analyzed water quality of lakes in Minnesota, and the relationship between lake quality and value of property around lakes, from 2002 - 2014, using BigQuery & R, at the MinneMUDAC, 2016
-* Time Series Modeling:** *Winner* - Served as Analytics lead in a 5-member team for the MSBA summer live case competition involving collaboration with a top-4 consulting firm for one of the largest business travel management company
-* [Kaggle Competitions Expert](https://www.kaggle.com/aayushmnit): *Top 1000 rank* - Achieved two top 3% & under top 100 finishes in machine learning competitions by building ensemble models using random forest, neural nets, gradient boosted trees using Python and R
-* [Moderator AnalyticsVidhya.com](https://datahack.analyticsvidhya.com/user/profile/aayushmnit): *Rank 3* - Winning two machine learning hackathons and six top 10 finishes in data science competitions by building ensemble models using various machine learning algorithms using Python, R and H20
+* **[Baseball Analytics](https://carlsonschool.umn.edu/news/msba-team-shows-prowess-in-analyzing-baseball-stats):** *Popularity Vote Award* - Predicted Fanduel points in Baseball for every Hitter pitcher combination per game of 2016 season using ensemble model of linear regression, random forest and gradient boosted trees in Python
+* **[Water Data Analysis](http://minneanalytics.org/diving-into-water-data-the-outcomes-of-minnemudac/):** *Analytical Acumen award* - Analyzed water quality of lakes in Minnesota, and the relationship between lake quality and value of property around lakes, from 2002 - 2014, using BigQuery & R, at the MinneMUDAC, 2016
+* **Time Series Modeling:** *Winner* - Served as Analytics lead in a 5-member team for the MSBA summer live case competition involving collaboration with a top-4 consulting firm for one of the largest business travel management company
+* **[Kaggle Competitions Expert](https://www.kaggle.com/aayushmnit):** *Top 1000 rank* - Achieved two top 3% & under top 100 finishes in machine learning competitions by building ensemble models using random forest, neural nets, gradient boosted trees using Python and R
+* **[Moderator AnalyticsVidhya.com](https://datahack.analyticsvidhya.com/user/profile/aayushmnit):** *Rank 3* - Winning two machine learning hackathons and six top 10 finishes in data science competitions by building ensemble models using various machine learning algorithms using Python, R and H20
   
 Skills
 ======
