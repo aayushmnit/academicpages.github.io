@@ -17,50 +17,37 @@ In this post, I am going to write about Recommender systems, how they are used i
 I am an avid reader and a believer in open source education and continuously expand my knowledge around data science & computer science using online courses, blogs, Github repositories and participating in data science competitions. While searching for quality content on the internet, I have come across various learning links which either focus on the implementation of the algorithm using certain data/modeling technique in ABC language or focus on business impact/results using the broad concept of a family of algorithms(like classification, forecasting, recommender systems etc.)  but don't go into details of how to do it. So the idea is to write some blogs which can combine both business use cases with codes & algorithmic idea to provide a holistic view of how data science is used in business scenarios. <br />
 
 As the world is becoming more digital we are already getting used to a lot of personalized experience and the algorithm which help us achieve this falls in the family of recommender systems. Almost every web based platform is using some sort of recommender system to achieve personalization and following are the companies I admire the most.
-<img src="https://github.com/aayushmnit/aayushmnit.github.io/blob/master/_posts/Business_usecase_of_recommender_system_using_lightFM/admired_companies.PNG" />
+<img src="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Business_usecase_of_recommender_system_using_lightFM/personalization_benefits.PNG?_sm_au_=iNVN0D70J32dtrsF" />
 
 ## What is personalization?
 
 Personalization is a technique of dynamically tailoring your content based on needs of each user. Simple examples of personalization could be movie recommendation on Netflix, personalized email targeting/re-targeting by e-commerce platforms, item recommendation on Amazon etc. Personalization helps us achieve these four Rs - 
-<li>
-    **Recognize:** Know customer’s and prospects’ profiles, including demographics, geography, and expressed and shared interests.
-</li> 
-<li>
-**Remember:** Recall customers’ history, especially how they act as expressed by what they browse and buy 
-</li>
-<li>
-**Reach:** Deliver the right promotion, content, recommendation for a customer based on actions, preferences and interests
-</li>
-<li> 
-**Relevance:** Deliver personalization within the context of the digital experience based on who customers are, where they are located and/or what time of year it is
-</li>
-<img src="https://github.com/aayushmnit/aayushmnit.github.io/blob/master/_posts/Business_usecase_of_recommender_system_using_lightFM/4r_personalization.PNG" />
+- **Recognize:** Know customer’s and prospects’ profiles, including demographics, geography, and expressed and shared interests.
+- **Remember:** Recall customers’ history, especially how they act as expressed by what they browse and buy 
+- **Reach:** Deliver the right promotion, content, recommendation for a customer based on actions, preferences and interests
+- **Relevance:** Deliver personalization within the context of the digital experience based on who customers are, where they are located and/or what time of year it is
+
+<img src="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Business_usecase_of_recommender_system_using_lightFM/4r_personalization.PNG?_sm_au_=iNVN0D70J32dtrsF" />
 
 ## Why personalization?
 
 Personalization has a lot of benefits for both users and companies. For users, it makes their life easy as they only get to see more relevant stuff to them (unless it's an advertisement, even they are personalized). For business benefits are countless but here are few which I would like to mention - 
-<li>
-**Enhance customer experience: **Personalization reduces the clutter and enhances the customer experience by showing relevant content
-</li>
-<li>
-**Cross-sell/ Up-sell opportunities: **Relevant product offerings based on customer preferences can lead to increasing products visibility and eventually selling more products 
-</li>
-<li>
-**Increased basket size: ** Personalized experience and targeting eventually leads to increased basket size and frequent purchases
-</li>
-<li>
-**Increased customer loyalty: ** In the digital world, customer retention/loyalty is the biggest problem faced by many companies as finding a replacement for a particular service is quite easy. According to a [Forbes article](https://www.forbes.com/sites/shephyken/2017/10/29/personalized-customer-experience-increases-revenue-and-loyalty/#36e9f054bd61), Forty-four percent of consumers say they will likely repeat after a personalized experience
-</li>
-<img src="https://github.com/aayushmnit/aayushmnit.github.io/blob/master/_posts/Business_usecase_of_recommender_system_using_lightFM/personalization_benefits.PNG" />
+- **Enhance customer experience: **Personalization reduces the clutter and enhances the customer experience by showing relevant content
+- **Cross-sell/ Up-sell opportunities: **Relevant product offerings based on customer preferences can lead to increasing products visibility and eventually selling more products 
+- **Increased basket size: ** Personalized experience and targeting eventually leads to increased basket size and frequent purchases
+- **Increased customer loyalty: ** In the digital world, customer retention/loyalty is the biggest problem faced by many companies as finding a replacement for a particular service is quite easy. According to a [Forbes article](https://www.forbes.com/sites/shephyken/2017/10/29/personalized-customer-experience-increases-revenue-and-loyalty/#36e9f054bd61), Forty-four percent of consumers say they will likely repeat after a personalized experience
+
+<img src="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Business_usecase_of_recommender_system_using_lightFM/personalization_benefits.PNG?_sm_au_=iNVN0D70J32dtrsF" />
 
 ## Introduction to Matrix factorization
 
 Matrix factorization is one of the algorithms from recommender systems family and as the name suggests it basically factorize a matrix i.e decompose a matrix in two(or more) matrices such that once you multiply them you get your original matrix back. In case of the recommendation system, we will typically start with an interaction/rating matrix between users and items and matrix factorization algorithm will decompose this matrix in user and item feature matrix which is also referred to embeddings. Example of interaction matrix would be user-movie ratings for movie recommender, user-product purchase flag for transaction data etc. <br/>
-<img src="https://github.com/aayushmnit/aayushmnit.github.io/blob/master/_posts/Business_usecase_of_recommender_system_using_lightFM/matrix_decomposition.png"/>
+<img src="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Business_usecase_of_recommender_system_using_lightFM/matrix_decomposition.png?_sm_au_=iNVN0D70J32dtrsF" />
+
 <br />
 Typically user/item embeddings capture latent features about attributes of users and item respectively. Essentially, latent features are the representation of user/item in an arbitrary space which represents how a user rate a movie. In the example of a movie recommender, an example of user embedding might represent affinity of a user to watch serious kind of movie when the value of the latent feature is high and comedy type of movie when the value is low. Similarly, a movie latent feature may have a high value when the movie is more male driven and when it's more female-driven the value is typically low.
 <br />
-<img src="./Business_usecase_of_recommender_system_using_lightFM/latent_feature.gif" />
+<img src="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Business_usecase_of_recommender_system_using_lightFM/latent_feature.gif?_sm_au_=iNVN0D70J32dtrsF" />
 
 For more information on matrix factorization and factorization machines you can read these articles - 
 <br />
@@ -460,11 +447,11 @@ movies_dict = create_item_dict(df = movies,
 ### Building Matrix Factorization model
 
 To build a matrix factorization model we will use **runMF** function which will take following input -  
-<ul> **1) interation matrix:** Interaction matrix created in previous section </ul> 
-<ul> **2) n_components: **Number of embedding created for each user and item</ul>
-<ul> **3) loss:** We need to define a loss functions in this case we are using [warp loss](https://lyst.github.io/lightfm/docs/examples/warp_loss.html) because we mostly care around ranking of data i.e which items should we show first</ul>
-<ul> **4) epoch:** Number of epochs to run </ul>
-<ul> **5) n_jobs:** Number of cores to use in parallel processin </ul>
+- **interation matrix:** Interaction matrix created in previous section 
+- **n_components: **Number of embedding created for each user and item
+- **loss:** We need to define a loss functions in this case we are using [warp loss](https://lyst.github.io/lightfm/docs/examples/warp_loss.html) because we mostly care around ranking of data i.e which items should we show first
+- **epoch:** Number of epochs to run 
+- **n_jobs:** Number of cores to use in parallel processing
 
 
 ```python
@@ -480,7 +467,7 @@ Now we have built our matrix factorization model we can now do some interesting 
 ### Usecase 1: Item recommendation to a user
 
 In this use case, we want to show a user, items he might be interested in buying/viewing based on his/her interactions done in the past. Typical industry examples for this are like "Deals recommended for you" on Amazon or "Top pics for a user" on Netflix or personalized email campaigns.
-<img src="https://github.com/aayushmnit/aayushmnit.github.io/blob/master/_posts/Business_usecase_of_recommender_system_using_lightFM/user_item_recommendation.PNG" />
+<img src="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Business_usecase_of_recommender_system_using_lightFM/user_item_recommendation.PNG?_sm_au_=iNVN0D70J32dtrsF" />
 
 We can use **sample_recommendation_user** function for this case. This functions take matrix factorization model, interaction matrix, user dictionary, item dictionary, user_id and the number of items as input and return the list of item id's a user may be interested in interacting.
 
@@ -538,7 +525,7 @@ print(rec_list)
     [593L, 260L, 110L, 480L, 47L, 527L, 344L, 858L, 231L, 780L]
     
 
-As we can see in this case user is interested in _"Dark Knight Rises(2012)"_ so the first recommendation is _"The Dark Knight(2008)"_. This user also seems to have a strong liking towards movies in drama, sci-fi and thriller genre and there are many movies recommended in the same genre like Dark Knight(Drama/Crime), Inception(Sci-Fi, Thriller), Iron Man(Sci-FI thriller), Shutter Island(Drame/Thriller), Fight club(drama), Avatar(Sci-fi), Forrest Gump(Drama), District 9(Thriller), Wall-E(Sci-fi), The Matrix(Sci-Fi) <br>
+As we can see in this case user is interested in _"Dark Knight Rises(2012)"_ so the first recommendation is _"The Dark Knight(2008)"_. This user also seems to have a strong liking towards movies in drama, sci-fi and thriller genre and there are many movies recommended in the same genre like Dark Knight(Drama/Crime), Inception(Sci-Fi, Thriller), Iron Man(Sci-FI thriller), Shutter Island(Drame/Thriller), Fight club(drama), Avatar(Sci-fi), Forrest Gump(Drama), District 9(Thriller), Wall-E(Sci-fi), The Matrix(Sci-Fi) <br />
 
 Similar models can also be used for building sections like "Based on your recent browsing history" recommendations by just changing the rating matrix to only contain interaction which is recent and based on browsing history visits on certain items.
 
@@ -546,7 +533,7 @@ Similar models can also be used for building sections like "Based on your recent
 
 In this use case, we will discuss how we can recommend a list of users specific to a particular item. Example of such cases is when you are running a promotion on an item and want to run an e-mail campaign around this promotional item to only 10,000 users who might be interested in this item.
 
-<img src="https://github.com/aayushmnit/aayushmnit.github.io/blob/master/_posts/Business_usecase_of_recommender_system_using_lightFM/item_user_recommendation.jpg" style="height: 800px;"/>
+<img src="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Business_usecase_of_recommender_system_using_lightFM/item_user_recommendation.jpg?_sm_au_=iNVN0D70J32dtrsF" style="height: 800px;"/>
 
 We can use **sample_recommendation_item** function for this case. This functions take matrix factorization model, interaction matrix, user dictionary, item dictionary, item_id and the number of users as input and return the list of user id's who are more likely be interested in the item.
 
@@ -576,7 +563,7 @@ In this use case, we will discuss how we can recommend a list of items specific 
 <br /> 
 _"Customers who bought this also bought this" and "Customers who viewed this item also viewed" can also be solved through market basket analysis._
 
-<img src="https://github.com/aayushmnit/aayushmnit.github.io/blob/master/_posts/Business_usecase_of_recommender_system_using_lightFM/crossell_bundling.PNG"/>
+<img src="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Business_usecase_of_recommender_system_using_lightFM/crossell_bundling.PNG?_sm_au_=iNVN0D70J32dtrsF" />
 
 To achieve this use case we will create a cosine distance matrix using item embeddings generated by matrix factorization model. This will help us calculate similarity b/w items and then we can recommend top N similar item to an item of interest. First step is to create a item-item distance matrix using **create_item_emdedding_distance_matrix** function. This function takes matrix factorization models and interaction matrix as input and returns an item_embedding_distance_matrix.
 
