@@ -32,10 +32,10 @@ Personalization is a technique of dynamically tailoring your content based on ne
 ## Why personalization?
 
 Personalization has a lot of benefits for both users and companies. For users, it makes their life easy as they only get to see more relevant stuff to them (unless it's an advertisement, even they are personalized). For business benefits are countless but here are few which I would like to mention - 
-- **Enhance customer experience: **Personalization reduces the clutter and enhances the customer experience by showing relevant content
-- **Cross-sell/ Up-sell opportunities: **Relevant product offerings based on customer preferences can lead to increasing products visibility and eventually selling more products 
-- **Increased basket size: ** Personalized experience and targeting eventually leads to increased basket size and frequent purchases
-- **Increased customer loyalty: ** In the digital world, customer retention/loyalty is the biggest problem faced by many companies as finding a replacement for a particular service is quite easy. According to a [Forbes article](https://www.forbes.com/sites/shephyken/2017/10/29/personalized-customer-experience-increases-revenue-and-loyalty/#36e9f054bd61), Forty-four percent of consumers say they will likely repeat after a personalized experience
+- __Enhance customer experience:__ Personalization reduces the clutter and enhances the customer experience by showing relevant content
+- __Cross-sell/ Up-sell opportunities:__ Relevant product offerings based on customer preferences can lead to increasing products visibility and eventually selling more products 
+- __Increased basket size:__ Personalized experience and targeting eventually leads to increased basket size and frequent purchases
+- __Increased customer loyalty:__ In the digital world, customer retention/loyalty is the biggest problem faced by many companies as finding a replacement for a particular service is quite easy. According to a [Forbes article](https://www.forbes.com/sites/shephyken/2017/10/29/personalized-customer-experience-increases-revenue-and-loyalty/#36e9f054bd61), Forty-four percent of consumers say they will likely repeat after a personalized experience
 
 <img src="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Business_usecase_of_recommender_system_using_lightFM/personalization_benefits.PNG?_sm_au_=iNVN0D70J32dtrsF" />
 
@@ -447,11 +447,11 @@ movies_dict = create_item_dict(df = movies,
 ### Building Matrix Factorization model
 
 To build a matrix factorization model we will use **runMF** function which will take following input -  
-- **interation matrix:** Interaction matrix created in previous section 
-- **n_components: **Number of embedding created for each user and item
-- **loss:** We need to define a loss functions in this case we are using [warp loss](https://lyst.github.io/lightfm/docs/examples/warp_loss.html) because we mostly care around ranking of data i.e which items should we show first
-- **epoch:** Number of epochs to run 
-- **n_jobs:** Number of cores to use in parallel processing
+- __interation matrix:__ Interaction matrix created in previous section 
+- __n_components:__ Number of embedding created for each user and item
+- __loss:__ We need to define a loss functions in this case we are using [warp loss](https://lyst.github.io/lightfm/docs/examples/warp_loss.html) because we mostly care around ranking of data i.e which items should we show first
+- __epoch:__ Number of epochs to run 
+- __n_jobs:__ Number of cores to use in parallel processing
 
 
 ```python
