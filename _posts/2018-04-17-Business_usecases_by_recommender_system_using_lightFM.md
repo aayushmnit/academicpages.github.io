@@ -8,8 +8,6 @@ tags:
   - Business
 ---
 
-## Introduction
-
 In this post, I am going to write about Recommender systems, how they are used in many e-commerce websites. The post will also cover about building simple models using Matrix Factorization algorithm using [lightFM](https://github.com/lyst/lightfm) package and my [recommender system cookbook](https://github.com/aayushmnit/cookbook/blob/master/recsys.py) to build basic recommender systems enabled components of a website. The post will focus on business use cases and their simple implementations and will only cover basic intuition around algorithms.
 
 ## Motivation
