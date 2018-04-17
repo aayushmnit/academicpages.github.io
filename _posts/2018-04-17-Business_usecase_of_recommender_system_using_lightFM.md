@@ -1,5 +1,5 @@
 ---
-title: 'Solving business usecase of recommender system using lightFM'
+title: 'Solving business usecases by recommender system using lightFM'
 date: 2018-04-17
 permalink: /posts/2018/04/Business_usecase_of_recommender_system_using_lightFM/
 tags:
