@@ -55,10 +55,11 @@ Personalization has a lot of benefits for both users and companies. For users, i
 
 ## Introduction to Matrix factorization
 
-Matrix factorization is one of the algorithms from recommender systems family and as the name suggests it basically factorize a matrix i.e decompose a matrix in two(or more) matrices such that once you multiply them you get your original matrix back. In case of the recommendation system, we will typically start with an interaction/rating matrix between users and items and matrix factorization algorithm will decompose this matrix in user and item feature matrix which is also referred to embeddings. Example of interaction matrix would be user-movie ratings for movie recommender, user-product purchase flag for transaction data etc.
+Matrix factorization is one of the algorithms from recommender systems family and as the name suggests it basically factorize a matrix i.e decompose a matrix in two(or more) matrices such that once you multiply them you get your original matrix back. In case of the recommendation system, we will typically start with an interaction/rating matrix between users and items and matrix factorization algorithm will decompose this matrix in user and item feature matrix which is also referred to embeddings. Example of interaction matrix would be user-movie ratings for movie recommender, user-product purchase flag for transaction data etc. <br/>
 <img src="https://github.com/aayushmnit/aayushmnit.github.io/blob/master/_posts/Business_usecase_of_recommender_system_using_lightFM/matrix_decomposition.png"/>
-
+<br />
 Typically user/item embeddings capture latent features about attributes of users and item respectively. Essentially, latent features are the representation of user/item in an arbitrary space which represents how a user rate a movie. In the example of a movie recommender, an example of user embedding might represent affinity of a user to watch serious kind of movie when the value of the latent feature is high and comedy type of movie when the value is low. Similarly, a movie latent feature may have a high value when the movie is more male driven and when it's more female-driven the value is typically low.
+<br />
 <img src="./Business_usecase_of_recommender_system_using_lightFM/latent_feature.gif" />
 
 For more information on matrix factorization and factorization machines you can read these articles - 
@@ -66,7 +67,6 @@ For more information on matrix factorization and factorization machines you can 
 [Matrix Factorization: A Simple Tutorial and Implementation in Python](http://www.quuxlabs.com/blog/2010/09/matrix-factorization-a-simple-tutorial-and-implementation-in-python/) 
 <br />
 [Introductory Guide – Factorization Machines & their application on huge datasets (with codes in Python)](https://www.analyticsvidhya.com/blog/2018/01/factorization-machines/)
-<ul>
 
 ## HandOn: Building recommender system using LightFM package in Python
 
