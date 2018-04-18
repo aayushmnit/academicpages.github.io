@@ -8,14 +8,14 @@ tags:
   - Business
 ---
 
-In this post, I am going to write about Recommender systems, how they are used in many e-commerce websites. The post will also cover about building simple models using Matrix Factorization algorithm using [lightFM](https://github.com/lyst/lightfm) package and my [recommender system cookbook](https://github.com/aayushmnit/cookbook/blob/master/recsys.py) to build basic recommender systems enabled components of a website. The post will focus on business use cases and their simple implementations and will only cover basic intuition around algorithms.
+In this post, I am going to write about Recommender systems, how they are used in many e-commerce websites. The post will also cover about building simple recommender system models using Matrix Factorization algorithm using [lightFM](https://github.com/lyst/lightfm) package and my [recommender system cookbook](https://github.com/aayushmnit/cookbook/blob/master/recsys.py). The post will focus on business use cases and their simple implementations and will only cover basic intuition around algorithms.
 
 ## Motivation
 
 I am an avid reader and a believer in open source education and continuously expand my knowledge around data science & computer science using online courses, blogs, Github repositories and participating in data science competitions. While searching for quality content on the internet, I have come across various learning links which either focus on the implementation of the algorithm using certain data/modeling technique in ABC language or focus on business impact/results using the broad concept of a family of algorithms(like classification, forecasting, recommender systems etc.)  but don't go into details of how to do it. So the idea is to write some blogs which can combine both business use cases with codes & algorithmic idea to provide a holistic view of how data science is used in business scenarios. <br />
 
 As the world is becoming more digital we are already getting used to a lot of personalized experience and the algorithm which help us achieve this falls in the family of recommender systems. Almost every web based platform is using some sort of recommender system to achieve personalization and following are the companies I admire the most.
-<img src="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Business_usecase_of_recommender_system_using_lightFM/personalization_benefits.PNG?_sm_au_=iNVN0D70J32dtrsF" />
+<img src="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Business_usecase_of_recommender_system_using_lightFM/admired_companies.PNG?_sm_au_=iNV0K5rfFkRSHNQR" />
 
 ## What is personalization?
 
