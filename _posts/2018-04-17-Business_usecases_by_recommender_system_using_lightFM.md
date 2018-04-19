@@ -429,7 +429,7 @@ interactions.head()
 
 
 
-As we can see the data is created in an interaction format where rows represent each user and columns represent each movie id with binary values in rating. <br/>
+As we can see the data is created in an interaction format where rows represent each user and columns represent each movie id with ratings as values. <br/>
 We will also create user and item dictionaries to later convert user_id to user_name or movie_id to movie_name by using **create_user_dict** and **create_item dict** function.
 
 
