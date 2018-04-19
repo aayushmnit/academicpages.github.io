@@ -59,7 +59,7 @@ In the hands-on section, we will be building recommender system for different sc
 
 ### Data
 
-Let's start by importing data, [recommender system cookbook](https://github.com/aayushmnit/cookbook/blob/master/recsys.py) and  [preprocessing cookbook](https://github.com/aayushmnit/cookbook/blob/master/generic_preprocessing.py) files for this hands-on section. I have written these [cookbook codes](https://github.com/aayushmnit/cookbook) for the generic reusable code to increase productivity and write clean/efficient codes, you will see we can build a recommender system using 10-15 lines of code by using cookbook (do more with less!).
+Let's start by importing data, [recommender system cookbook](https://github.com/aayushmnit/cookbook/blob/master/recsys.py) and  [preprocessing cookbook](https://github.com/aayushmnit/cookbook/blob/master/generic_preprocessing.py) files for this hands-on section. I have written these reusable generic [cookbook codes](https://github.com/aayushmnit/cookbook) to increase productivity and write clean/modular codes, you will see we can build a recommender system using 10-15 lines of code by using these cookbooks(do more with less!).
 
 
 ```python
@@ -557,7 +557,7 @@ As you can see function return a list of userID who might be interested in item 
 
 ### Usecase 3: Item recommendation to items
 
-In this use case, we will discuss how we can recommend a list of items specific to a particular item. This kind of models will help you to find similar/related items or which can be bundled together. Typical industry use case for such models are in cross-selling and up-selling opportunities on product page like "Products related to this item", "Frequently bought together", "Customers who bought this also bought this" and "Customers who viewed this item also viewed".
+In this use case, we will discuss how we can recommend a list of items specific to a particular item. This kind of models will help you to find similar/related items or items which can be bundled together. Typical industry use case for such models are in cross-selling and up-selling opportunities on product page like "Products related to this item", "Frequently bought together", "Customers who bought this also bought this" and "Customers who viewed this item also viewed".
 <br /> 
 _"Customers who bought this also bought this" and "Customers who viewed this item also viewed" can also be solved through market basket analysis._
 
