@@ -531,7 +531,7 @@ Similar models can also be used for building sections like "Based on your recent
 
 In this use case, we will discuss how we can recommend a list of users specific to a particular item. Example of such cases is when you are running a promotion on an item and want to run an e-mail campaign around this promotional item to only 10,000 users who might be interested in this item.
 
-<img src="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Business_usecase_of_recommender_system_using_lightFM/item_user_recommendation.jpg?_sm_au_=iNVN0D70J32dtrsF" style="height: 800px;"/>
+<img src="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Business_usecase_of_recommender_system_using_lightFM/item_user_recommendation.jpg?_sm_au_=iNVN0D70J32dtrsF" />
 
 We can use **sample_recommendation_item** function for this case. This functions take matrix factorization model, interaction matrix, user dictionary, item dictionary, item_id and the number of users as input and return the list of user id's who are more likely be interested in the item.
 
