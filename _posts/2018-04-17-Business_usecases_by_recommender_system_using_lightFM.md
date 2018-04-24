@@ -8,22 +8,22 @@ tags:
   - Business
 ---
 
-In this post, I am going to write about Recommender systems, how they are used in many e-commerce websites. The post will also cover about building simple recommender system models using Matrix Factorization algorithm using [lightFM](https://github.com/lyst/lightfm) package and my [recommender system cookbook](https://github.com/aayushmnit/cookbook/blob/master/recsys.py). The post will focus on business use cases and simple implementations. The post only cover basic intuition around algorithms and will provide links to resources if you want to understand math behind the algorithm.
+In this post, I am going to write about Recommender systems, how they are used in many e-commerce websites. The post will also cover about building simple recommender system models using Matrix Factorization algorithm using [lightFM](https://github.com/lyst/lightfm) package and my [recommender system cookbook](https://github.com/aayushmnit/cookbook/blob/master/recsys.py). The post will focus on business use cases and simple implementations. The post only cover basic intuition around algorithms and will provide links to resources if you want to understand the math behind the algorithm.
 
 ## Motivation
 
-I am an avid reader and a believer in open source education and continuously expand my knowledge around data science & computer science using online courses, blogs, Github repositories and participating in data science competitions. While searching for quality content on the internet, I have come across various learning links which either focus on the implementation of the algorithm using certain data/modeling technique in ABC language or focus on business impact/results using the broad concept of a family of algorithms(like classification, forecasting, recommender systems etc.)  but don't go into details of how to do it. So the idea is to write some blogs which can combine both business use cases with codes & algorithmic idea to provide a holistic view of how data science is used in business scenarios. <br />
+I am an avid reader and a believer in open source education and continuously expand my knowledge around data science & computer science using online courses, blogs, Github repositories and participating in data science competitions. While searching for quality content on the internet, I have come across various learning links which either focus on the implementation of the algorithm using specific data/modeling technique in ABC language or focus on business impact/results using the broad concept of a family of algorithms(like classification, forecasting, recommender systems etc.)  but don't go into details of how to do it. So the idea is to write some blogs which can combine both business use cases with codes & algorithmic intuition to provide a holistic view of how data science is used in business scenarios. <br />
 
-As the world is becoming more digital we are already getting used to a lot of personalized experience and the algorithm which help us achieve this falls in the family of recommender systems. Almost every web based platform is using some sort of recommender system to achieve personalization and following are the companies I admire the most.
+As the world is becoming more digital, we are already getting used to a lot of personalized experience and the algorithm which help us achieve this falls in the family of recommender systems. Almost every web-based platform is using some recommender system to provide customized content. Following are the companies I admire the most. 
 <img src="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Business_usecase_of_recommender_system_using_lightFM/admired_companies.PNG?_sm_au_=iNV0K5rfFkRSHNQR" />
 
 ## What is personalization?
 
-Personalization is a technique of dynamically tailoring your content based on needs of each user. Simple examples of personalization could be movie recommendation on Netflix, personalized email targeting/re-targeting by e-commerce platforms, item recommendation on Amazon etc. Personalization helps us achieve these four Rs - 
+Personalization is a technique of dynamically tailoring your content based on needs of each user. Simple examples of personalization could be movie recommendation on Netflix, personalized email targeting/re-targeting by e-commerce platforms, item recommendation on Amazon, etc. Personalization helps us achieve these four Rs - 
 - **Recognize:** Know customer’s and prospects’ profiles, including demographics, geography, and expressed and shared interests.
-- **Remember:** Recall customers’ history, especially how they act as expressed by what they browse and buy 
-- **Reach:** Deliver the right promotion, content, recommendation for a customer based on actions, preferences and interests
-- **Relevance:** Deliver personalization within the context of the digital experience based on who customers are, where they are located and/or what time of year it is
+- **Remember:** Recall customers’ history, primarily how they act as expressed by what they browse and buy 
+- **Reach:** Deliver the right promotion, content, recommendation for a customer based on actions, preferences, and interests
+- **Relevance:** Deliver personalization within the context of the digital experience based on who customers are, where they are located and what time of year it is
 
 <img src="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Business_usecase_of_recommender_system_using_lightFM/4r_personalization.PNG?_sm_au_=iNVN0D70J32dtrsF" />
 
@@ -32,14 +32,14 @@ Personalization is a technique of dynamically tailoring your content based on ne
 Personalization has a lot of benefits for both users and companies. For users, it makes their life easy as they only get to see more relevant stuff to them (unless it's an advertisement, even they are personalized). For business benefits are countless but here are few which I would like to mention - 
 - __Enhance customer experience:__ Personalization reduces the clutter and enhances the customer experience by showing relevant content
 - __Cross-sell/ Up-sell opportunities:__ Relevant product offerings based on customer preferences can lead to increasing products visibility and eventually selling more products 
-- __Increased basket size:__ Personalized experience and targeting eventually leads to increased basket size and frequent purchases
-- __Increased customer loyalty:__ In the digital world, customer retention/loyalty is the biggest problem faced by many companies as finding a replacement for a particular service is quite easy. According to a [Forbes article](https://www.forbes.com/sites/shephyken/2017/10/29/personalized-customer-experience-increases-revenue-and-loyalty/#36e9f054bd61), Forty-four percent of consumers say they will likely repeat after a personalized experience
+- __Increased basket size:__ Personalized experience and targeting ultimately leads to increased basket size and frequent purchases
+- __Increased customer loyalty:__ In the digital world, customer retention/loyalty is the most prominent problem faced by many companies as finding a replacement for a particular service is quite easy. According to a [Forbes article](https://www.forbes.com/sites/shephyken/2017/10/29/personalized-customer-experience-increases-revenue-and-loyalty/#36e9f054bd61), Forty-four percent of consumers say they will likely repeat after a personalized experience
 
 <img src="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Business_usecase_of_recommender_system_using_lightFM/personalization_benefits.PNG?_sm_au_=iNVN0D70J32dtrsF" />
 
 ## Introduction to Matrix factorization
 
-Matrix factorization is one of the algorithms from recommender systems family and as the name suggests it basically factorize a matrix i.e decompose a matrix in two(or more) matrices such that once you multiply them you get your original matrix back. In case of the recommendation system, we will typically start with an interaction/rating matrix between users and items and matrix factorization algorithm will decompose this matrix in user and item feature matrix which is also referred to embeddings. Example of interaction matrix would be user-movie ratings for movie recommender, user-product purchase flag for transaction data etc. <br/>
+Matrix factorization is one of the algorithms from recommender systems family and as the name suggests it factorize a matrix, i.e., decompose a matrix in two(or more) matrices such that once you multiply them you get your original matrix back. In case of the recommendation system, we will typically start with an interaction/rating matrix between users and items and matrix factorization algorithm will decompose this matrix in user and item feature matrix which is also known as embeddings. Example of interaction matrix would be user-movie ratings for movie recommender, user-product purchase flag for transaction data, etc. <br/>
 <img src="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Business_usecase_of_recommender_system_using_lightFM/matrix_decomposition.png?_sm_au_=iNVN0D70J32dtrsF" />
 
 <br />
@@ -59,7 +59,7 @@ In the hands-on section, we will be building recommender system for different sc
 
 ### Data
 
-Let's start by importing data, [recommender system cookbook](https://github.com/aayushmnit/cookbook/blob/master/recsys.py) and  [preprocessing cookbook](https://github.com/aayushmnit/cookbook/blob/master/generic_preprocessing.py) files for this hands-on section. I have written these reusable generic [cookbook codes](https://github.com/aayushmnit/cookbook) to increase productivity and write clean/modular codes, you will see we can build a recommender system using 10-15 lines of code by using these cookbooks(do more with less!).
+Let's start by importing data, [recommender system cookbook](https://github.com/aayushmnit/cookbook/blob/master/recsys.py) and  [preprocessing cookbook](https://github.com/aayushmnit/cookbook/blob/master/generic_preprocessing.py) files for this hands-on section. I have written these reusable generic [cookbook codes](https://github.com/aayushmnit/cookbook) to increase productivity and write clean/modular codes; you will see we can build a recommender system using 10-15 lines of code by using these cookbooks(do more with less!).
 
 
 ```python
@@ -217,11 +217,11 @@ movies.head()
 
 
 
-Movie data consist of movie id, their title, and genre they belong to.
+Movie data consist of movie id, their title, and genre they belong.
 
 ### Preprocessing
 
-As I mentioned before, to create a recommender system we need to start by creating an interaction matrix. For this task, we will use the **create_interaction_matrix** function from the recsys cookbook. This function requires you to input a pandas dataframe and basic information like column name for user id, item id, and rating. It also takes an additional parameter **threshold** if norm=True which means any rating above the mentioned threshold is considered a positive rating. In our case, we don't have to normalize our data but in cases of retail data any purchase of a certain type of item can be considered a positive rating, quantity doesn't matter.
+As I mentioned before, to create a recommender system we need to start by creating an interaction matrix. For this task, we will use the **create_interaction_matrix** function from the recsys cookbook. This function requires you to input a pandas dataframe and necessary information like column name for user id, item id, and rating. It also takes an additional parameter **threshold** if norm=True which means any rating above the mentioned threshold is considered a positive rating. In our case, we don't have to normalize our data, but in cases of retail data any purchase of a particular type of item can be considered a positive rating, quantity doesn't matter.
 
 
 ```python
@@ -444,11 +444,11 @@ movies_dict = create_item_dict(df = movies,
 
 ### Building Matrix Factorization model
 
-To build a matrix factorization model we will use **runMF** function which will take following input -  
-- __interation matrix:__ Interaction matrix created in previous section 
-- __n_components:__ Number of embedding created for each user and item
-- __loss:__ We need to define a loss functions in this case we are using [warp loss](https://lyst.github.io/lightfm/docs/examples/warp_loss.html) because we mostly care around ranking of data i.e which items should we show first
-- __epoch:__ Number of epochs to run 
+To build a matrix factorization model, we will use the **runMF** function which will take following input -  
+- __interaction matrix:__ Interaction matrix created in the previous section 
+- __n_components:__ Number of embedding generated for each user and item
+- __loss:__ We need to define a loss function, in this case, we are using [warp loss](https://lyst.github.io/lightfm/docs/examples/warp_loss.html) because we mostly care about the ranking of data, i.e, which items should we show first
+- __epoch:__ Number of times to run 
 - __n_jobs:__ Number of cores to use in parallel processing
 
 
@@ -467,7 +467,7 @@ Now we have built our matrix factorization model we can now do some interesting 
 In this use case, we want to show a user, items he might be interested in buying/viewing based on his/her interactions done in the past. Typical industry examples for this are like "Deals recommended for you" on Amazon or "Top pics for a user" on Netflix or personalized email campaigns.
 <img src="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Business_usecase_of_recommender_system_using_lightFM/user_item_recommendation.PNG?_sm_au_=iNVN0D70J32dtrsF" />
 
-We can use **sample_recommendation_user** function for this case. This functions take matrix factorization model, interaction matrix, user dictionary, item dictionary, user_id and the number of items as input and return the list of item id's a user may be interested in interacting.
+We can use the **sample_recommendation_user** function for this case. This functions take matrix factorization model, interaction matrix, user dictionary, item dictionary, user_id and the number of items as input and return the list of item id's a user may be interested in interacting.
 
 
 ```python
@@ -525,7 +525,7 @@ print(rec_list)
 
 As we can see in this case user is interested in _"Dark Knight Rises(2012)"_ so the first recommendation is _"The Dark Knight(2008)"_. This user also seems to have a strong liking towards movies in drama, sci-fi and thriller genre and there are many movies recommended in the same genre like Dark Knight(Drama/Crime), Inception(Sci-Fi, Thriller), Iron Man(Sci-FI thriller), Shutter Island(Drame/Thriller), Fight club(drama), Avatar(Sci-fi), Forrest Gump(Drama), District 9(Thriller), Wall-E(Sci-fi), The Matrix(Sci-Fi) <br />
 
-Similar models can also be used for building sections like "Based on your recent browsing history" recommendations by just changing the rating matrix to only contain interaction which is recent and based on browsing history visits on certain items.
+Similar models can also be used for building sections like "Based on your recent browsing history" recommendations by just changing the rating matrix only to contain interaction which is recent and based on browsing history visits on specific items.
 
 ### Usecase 2: User recommendation to a item
 
@@ -533,7 +533,7 @@ In this use case, we will discuss how we can recommend a list of users specific 
 
 <img src="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Business_usecase_of_recommender_system_using_lightFM/item_user_recommendation.jpg?_sm_au_=iNVN0D70J32dtrsF" />
 
-We can use **sample_recommendation_item** function for this case. This functions take matrix factorization model, interaction matrix, user dictionary, item dictionary, item_id and the number of users as input and return the list of user id's who are more likely be interested in the item.
+We can use the **sample_recommendation_item** function for this case. This functions take matrix factorization model, interaction matrix, user dictionary, item dictionary, item_id and the number of users as input and return the list of user id's who are more likely be interested in the item.
 
 
 ```python
@@ -553,7 +553,7 @@ sample_recommendation_item(model = mf_model,
 
 
 
-As you can see function return a list of userID who might be interested in item id 1. Another example why you might need such model is when there is an old inventory sitting in your warehouse which needs to clear up otherwise you might have to write it off and you want to clear it by giving some discount to users who might be interested in buying.
+As you can see function return a list of userID who might be interested in item id 1. Another example why you might need such model is when there is an old inventory sitting in your warehouse which needs to clear up otherwise you might have to write it off, and you want to clear it by giving some discount to users who might be interested in buying.
 
 ### Usecase 3: Item recommendation to items
 
@@ -563,7 +563,7 @@ _"Customers who bought this also bought this" and "Customers who viewed this ite
 
 <img src="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Business_usecase_of_recommender_system_using_lightFM/crossell_bundling.PNG?_sm_au_=iNVN0D70J32dtrsF" />
 
-To achieve this use case we will create a cosine distance matrix using item embeddings generated by matrix factorization model. This will help us calculate similarity b/w items and then we can recommend top N similar item to an item of interest. First step is to create a item-item distance matrix using **create_item_emdedding_distance_matrix** function. This function takes matrix factorization models and interaction matrix as input and returns an item_embedding_distance_matrix.
+To achieve this use case, we will create a cosine distance matrix using item embeddings generated by matrix factorization model. This will help us calculate similarity b/w items, and then we can recommend top N similar item to an item of interest. First step is to create a item-item distance matrix using the **create_item_emdedding_distance_matrix** function. This function takes matrix factorization models and interaction matrix as input and returns an item_embedding_distance_matrix.
 
 
 ```python
@@ -774,7 +774,7 @@ item_item_dist.head()
 
 
 
-As we can see the matrix have movies as both row and columns and the value represents the cosine distance b/w them. Next step is to use **item_item_recommendation** function to get top N items with respect to an item_id. This function takes item embedding distance matrix, item_id, item_dictionary and number of items to be recommended as input and return similar item list as output.
+As we can see the matrix have movies as both row and columns and the value represents the cosine distance between them. Next step is to use **item_item_recommendation** function to get top N items with respect to an item_id. This function takes item embedding distance matrix, item_id, item_dictionary and number of items to be recommended as input and return similar item list as output.
 
 
 ```python
@@ -805,4 +805,4 @@ As we can see for "Star Wars: Episode II - Attack of the Clones (2002)" movie we
 
 Like any other blog, this method isn’t perfect for every application, but the same ideas can work if we use it effectively. There is a lot of advancements in recommender systems with the advent of Deep learning. While there is room for improvement, I am pleased with how it has been working for me so far. I might write about deep learning based recommender systems later sometime.
 
-In the meantime, I hope you enjoyed reading, and feel free to use my code to try it out for your own purposes. Also, if there is any feedback on code or just the blog post, feel free to reach out on [LinkedIn](https://www.linkedin.com/in/aayushmnit/) or email me at aayushmnit@gmail.com.
+In the meantime, I hope you enjoyed reading, and feel free to use my code to try it out for your purposes. Also, if there is any feedback on code or just the blog post, feel free to reach out on [LinkedIn](https://www.linkedin.com/in/aayushmnit/) or email me at aayushmnit@gmail.com.
