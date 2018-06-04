@@ -17,24 +17,24 @@ A neural network is a type of machine learning model which is inspired by our ne
 Multi-layer perceptron is a type of network where multiple layers of a group of perceptron are stacked together to make a model. Before we jump into the concept of a layer and multiple perceptrons, let's start with the building block of this network which is a perceptron. Think of perceptron/neuron as a linear model which takes multiple inputs and produce an output. In our case perceptron is a linear model which takes a bunch of inputs multiply them with weights and add a bias term to generate an output.<br/>
 <center>$Z= \vec{w} \cdot X + {b}$</center> <br/>
 <img src="https://raw.githubusercontent.com/aayushmnit/Deep_learning_explorations/master/1_MLP_from_scratch/perceptron.png" align='center'>
-<center>_Fig 1: Perceptron image_</center> <br/>
-<div align='right'>_Image credit=https://commons.wikimedia.org/wiki/File:Perceptron.png/_</div>
+<center>Fig 1: Perceptron image</center> <br/>
+<div align='right'>Image credit=https://commons.wikimedia.org/wiki/File:Perceptron.png/</div>
 
 Now, if we stack a bunch of these perceptrons together, it becomes a hidden layer which is also known as a Dense layer in modern deep learning terminology. <br/>
 <center>__Dense layer,__ $f(X)=W \cdot X + \vec{b}$</center> <br/>
 *Note that bias term is now a vector and W is a weight matrix* <br/>
 <img src="https://raw.githubusercontent.com/aayushmnit/Deep_learning_explorations/master/1_MLP_from_scratch/single_layer_mlp.png" align ='center'>
-<center>_Fig: Single dense layer perceptron network_</center> <br/>
-<div align='right'>_Image credit=http://www.texample.net/tikz/examples/neural-network/_</div>
+<center>Fig: Single dense layer perceptron network</center> <br/>
+<div align='right'>Image credit=http://www.texample.net/tikz/examples/neural-network/</div>
 
 Now we understand dense layer let's add a bunch of them, and that network becomes a multi-layer perceptron network.
 
 <img src="https://raw.githubusercontent.com/aayushmnit/Deep_learning_explorations/master/1_MLP_from_scratch/multi_layer_mlp.png" align ='center'>
-<center>_Fig: Multi layer perceptron network_</center> <br/>
-<div align='right'>_Image credit=http://pubs.sciepub.com/ajmm/3/3/1/figure/2_</div>    
+<center>Fig: Multi layer perceptron network</center> <br/>
+<div align='right'>Image credit=http://pubs.sciepub.com/ajmm/3/3/1/figure/2s</div>    
 
 If you have noticed our dense layer, only have linear functions, and any combination of linear function only results in the linear output. As we want our MLP to be flexible and learn non-linear decision boundaries, we also need to introduce non-linearity into the network. We achieve the task of introducing non-linearity by adding activation function. There are various kinds of activation function which can be used, but we will be implementing Rectified Linear Units(ReLu) which is one of the popular activation function. ReLU function is a simple function which is zero for any input value below zero and the same value for values greater than zero. <br/>
-<center>__ReLU function __ $f(X) = max(0,X)$</center>
+<center>__ReLU function __ <img src="http://mathurl.com/y84skzyk"></center>
 <br/>
 Now, we understand dense layer and also understand the purpose of activation function, the only thing left is training the network. For training a neural network we need to have a loss function and every layer should have a __feed-forward loop__ and __backpropagation loop__. Feedforward loop takes an input and generates output for making a prediction and backpropagation loop helps in training the model by adjusting weights in the layer to lower the output loss. In backpropagation, the weight update is done by using backpropagated gradients using the chain rule and optimized using an optimization algorithm. In our case, we will be using SGD(stochastic gradient descent). If you don't understand the concept of gradient weight updates and SGD, I recommend you to watch [week 1 of Machine learning by Andrew NG lectures](https://www.coursera.org/ml).
 
