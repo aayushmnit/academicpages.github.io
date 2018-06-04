@@ -15,39 +15,39 @@ A neural network is a type of machine learning model which is inspired by our ne
 ## What is a Multi layer perceptron?
 
 Multi-layer perceptron is a type of network where multiple layers of a group of perceptron are stacked together to make a model. Before we jump into the concept of a layer and multiple perceptrons, let's start with the building block of this network which is a perceptron. Think of perceptron/neuron as a linear model which takes multiple inputs and produce an output. In our case perceptron is a linear model which takes a bunch of inputs multiply them with weights and add a bias term to generate an output.<br/>
-<center>$Z= \vec{w} \cdot X + {b}$<center> <br/>
+<center>$Z= \vec{w} \cdot X + {b}$</center> <br/>
 <img src="https://raw.githubusercontent.com/aayushmnit/Deep_learning_explorations/master/1_MLP_from_scratch/perceptron.png" align='center'>
-<center>*Fig 1: Perceptron image*<center> <br/>
-<div align='right'>*Image credit=https://commons.wikimedia.org/wiki/File:Perceptron.png/*</div>
+<center>_Fig 1: Perceptron image_</center> <br/>
+<div align='right'>_Image credit=https://commons.wikimedia.org/wiki/File:Perceptron.png/_</div>
 
 Now, if we stack a bunch of these perceptrons together, it becomes a hidden layer which is also known as a Dense layer in modern deep learning terminology. <br/>
-<center>**Dense layer,** $f(X)=W \cdot X + \vec{b}$</center> <br/>
+<center>__Dense layer,__ $f(X)=W \cdot X + \vec{b}$</center> <br/>
 *Note that bias term is now a vector and W is a weight matrix* <br/>
 <img src="https://raw.githubusercontent.com/aayushmnit/Deep_learning_explorations/master/1_MLP_from_scratch/single_layer_mlp.png" align ='center'>
-<center>***Fig: Single dense layer perceptron network***<center> <br/>
-<div align='right'>*Image credit=http://www.texample.net/tikz/examples/neural-network/*</div>
+<center>_Fig: Single dense layer perceptron network_</center> <br/>
+<div align='right'>_Image credit=http://www.texample.net/tikz/examples/neural-network/_</div>
 
 Now we understand dense layer let's add a bunch of them, and that network becomes a multi-layer perceptron network.
 
 <img src="https://raw.githubusercontent.com/aayushmnit/Deep_learning_explorations/master/1_MLP_from_scratch/multi_layer_mlp.png" align ='center'>
-<center>***Fig: Multi layer perceptron network***<center> <br/>
-<div align='right'> *Image credit=http://pubs.sciepub.com/ajmm/3/3/1/figure/2*</div>    
+<center>_Fig: Multi layer perceptron network_</center> <br/>
+<div align='right'>_Image credit=http://pubs.sciepub.com/ajmm/3/3/1/figure/2_</div>    
 
 If you have noticed our dense layer, only have linear functions, and any combination of linear function only results in the linear output. As we want our MLP to be flexible and learn non-linear decision boundaries, we also need to introduce non-linearity into the network. We achieve the task of introducing non-linearity by adding activation function. There are various kinds of activation function which can be used, but we will be implementing Rectified Linear Units(ReLu) which is one of the popular activation function. ReLU function is a simple function which is zero for any input value below zero and the same value for values greater than zero. <br/>
-<center>**ReLU function ** $f(X) = max(0,X)$</center>
+<center>__ReLU function __ $f(X) = max(0,X)$</center>
 <br/>
-Now, we understand dense layer and also understand the purpose of activation function, the only thing left is training the network. For training a neural network we need to have a loss function and every layer should have a **feed-forward loop** and **backpropagation loop**. Feedforward loop takes an input and generates output for making a prediction and backpropagation loop helps in training the model by adjusting weights in the layer to lower the output loss. In backpropagation, the weight update is done by using backpropagated gradients using the chain rule and optimized using an optimization algorithm. In our case, we will be using SGD(stochastic gradient descent). If you don't understand the concept of gradient weight updates and SGD, I recommend you to watch [week 1 of Machine learning by Andrew NG lectures](https://www.coursera.org/ml).
+Now, we understand dense layer and also understand the purpose of activation function, the only thing left is training the network. For training a neural network we need to have a loss function and every layer should have a __feed-forward loop__ and __backpropagation loop__. Feedforward loop takes an input and generates output for making a prediction and backpropagation loop helps in training the model by adjusting weights in the layer to lower the output loss. In backpropagation, the weight update is done by using backpropagated gradients using the chain rule and optimized using an optimization algorithm. In our case, we will be using SGD(stochastic gradient descent). If you don't understand the concept of gradient weight updates and SGD, I recommend you to watch [week 1 of Machine learning by Andrew NG lectures](https://www.coursera.org/ml).
 
 So, to summarize a neural network needs few building blocks
 
-- Dense layer - a fully-connected layer, $f(X)=W \cdot X + \vec{b}$
-- ReLU layer (or any other activation function to introduce non-linearity)
-- Loss function - (crossentropy in case of multi-class classification problem)
-- Backprop algorithm - a stochastic gradient descent with backpropageted gradients
+- __Dense layer__ - a fully-connected layer, $f(X)=W \cdot X + \vec{b}$
+- __ReLU layer__ (or any other activation function to introduce non-linearity)
+- __Loss function__ - (crossentropy in case of multi-class classification problem)
+- __Backprop algorithm__ - a stochastic gradient descent with backpropageted gradients
 
 Let's approach them one at a time.
 
-## Coding Starts here --
+## Coding Starts here:
 
 Let's start by importing some libraires required for creating our neural network.
 
@@ -63,39 +63,37 @@ Every layer will have a forward pass and backpass implementation. Let's create a
 
 ```python
 class Layer:
-    """
-    A building block. Each layer is capable of performing two things:
+    
+    #A building block. Each layer is capable of performing two things:
 
-    - Process input to get output:           output = layer.forward(input)
+    #- Process input to get output:           output = layer.forward(input)
     
-    - Propagate gradients through itself:    grad_input = layer.backward(input, grad_output)
+    #- Propagate gradients through itself:    grad_input = layer.backward(input, grad_output)
     
-    Some layers also have learnable parameters which they update during layer.backward.
-    """
+    #Some layers also have learnable parameters which they update during layer.backward.
+    
     def __init__(self):
-        """Here we can initialize layer parameters (if any) and auxiliary stuff."""
+        # Here we can initialize layer parameters (if any) and auxiliary stuff.
         # A dummy layer does nothing
         pass
     
     def forward(self, input):
-        """
-        Takes input data of shape [batch, input_units], returns output data [batch, output_units]
-        """
+        # Takes input data of shape [batch, input_units], returns output data [batch, output_units]
+        
         # A dummy layer just returns whatever it gets as input.
         return input
 
     def backward(self, input, grad_output):
-        """
-        Performs a backpropagation step through the layer, with respect to the given input.
+        # Performs a backpropagation step through the layer, with respect to the given input.
         
-        To compute loss gradients w.r.t input, we need to apply chain rule (backprop):
+        # To compute loss gradients w.r.t input, we need to apply chain rule (backprop):
         
-        d loss / d x  = (d loss / d layer) * (d layer / d x)
+        # d loss / d x  = (d loss / d layer) * (d layer / d x)
         
-        Luckily, we already receive d loss / d layer as input, so you only need to multiply it by d layer / d x.
+        # Luckily, we already receive d loss / d layer as input, so you only need to multiply it by d layer / d x.
         
-        If our layer has parameters (e.g. dense layer), we also need to update them here using d loss / d layer
-        """
+        # If our layer has parameters (e.g. dense layer), we also need to update them here using d loss / d layer
+        
         # The gradient of a dummy layer is precisely grad_output, but we'll write it more explicitly
         num_units = input.shape[1]
         
@@ -112,16 +110,16 @@ This is the simplest layer you can get: it simply applies a nonlinearity to each
 ```python
 class ReLU(Layer):
     def __init__(self):
-        """ReLU layer simply applies elementwise rectified linear unit to all inputs"""
+        # ReLU layer simply applies elementwise rectified linear unit to all inputs
         pass
     
     def forward(self, input):
-        """Apply elementwise ReLU to [batch, input_units] matrix"""
+        # Apply elementwise ReLU to [batch, input_units] matrix
         relu_forward = np.maximum(0,input)
         return relu_forward
     
     def backward(self, input, grad_output):
-        """Compute gradient of loss w.r.t. ReLU input"""
+        # Compute gradient of loss w.r.t. ReLU input
         relu_grad = input > 0
         return grad_output*relu_grad 
 ```
@@ -144,10 +142,9 @@ Both W and b are initialized during layer creation and updated each time backwar
 ```python
 class Dense(Layer):
     def __init__(self, input_units, output_units, learning_rate=0.1):
-        """
-        A dense layer is a layer which performs a learned affine transformation:
-        f(x) = <W*x> + b
-        """
+        # A dense layer is a layer which performs a learned affine transformation:
+        # f(x) = <W*x> + b
+        
         self.learning_rate = learning_rate
         self.weights = np.random.normal(loc=0.0, 
                                         scale = np.sqrt(2/(input_units+output_units)), 
@@ -155,13 +152,12 @@ class Dense(Layer):
         self.biases = np.zeros(output_units)
         
     def forward(self,input):
-        """
-        Perform an affine transformation:
-        f(x) = <W*x> + b
+        # Perform an affine transformation:
+        # f(x) = <W*x> + b
         
-        input shape: [batch, input_units]
-        output shape: [batch, output units]
-        """
+        # input shape: [batch, input_units]
+        # output shape: [batch, output units]
+        
         return np.dot(input,self.weights) + self.biases
     
     def backward(self,input,grad_output):
@@ -204,7 +200,7 @@ So why not just use log-softmax throughout our computation and never actually bo
 
 ```python
 def softmax_crossentropy_with_logits(logits,reference_answers):
-    """Compute crossentropy from logits[batch,n_classes] and ids of correct answers"""
+    # Compute crossentropy from logits[batch,n_classes] and ids of correct answers
     logits_for_answers = logits[np.arange(len(logits)),reference_answers]
     
     xentropy = - logits_for_answers + np.log(np.sum(np.exp(logits),axis=-1))
@@ -212,7 +208,7 @@ def softmax_crossentropy_with_logits(logits,reference_answers):
     return xentropy
 
 def grad_softmax_crossentropy_with_logits(logits,reference_answers):
-    """Compute crossentropy gradient from logits[batch,n_classes] and ids of correct answers"""
+    # Compute crossentropy gradient from logits[batch,n_classes] and ids of correct answers
     ones_for_answers = np.zeros_like(logits)
     ones_for_answers[np.arange(len(logits)),reference_answers] = 1
     
@@ -278,10 +274,9 @@ network.append(Dense(200,10))
 
 ```python
 def forward(network, X):
-    """
-    Compute activations of all network layers by applying them sequentially.
-    Return a list of activations for each layer. 
-    """
+    # Compute activations of all network layers by applying them sequentially.
+    # Return a list of activations for each layer. 
+    
     activations = []
     input = X
 
@@ -295,19 +290,17 @@ def forward(network, X):
     return activations
 
 def predict(network,X):
-    """
-    Compute network predictions. Returning indices of largest Logit probability
-    """
+    # Compute network predictions. Returning indices of largest Logit probability
+
     logits = forward(network,X)[-1]
     return logits.argmax(axis=-1)
 
 def train(network,X,y):
-    """
-    Train our network on a given batch of X and y.
-    We first need to run forward to get all layer activations.
-    Then we can run layer.backward going from last to first layer.
-    After we have called backward for all layers, all Dense layers have already made one gradient step.
-    """
+    # Train our network on a given batch of X and y.
+    # We first need to run forward to get all layer activations.
+    # Then we can run layer.backward going from last to first layer.
+    # After we have called backward for all layers, all Dense layers have already made one gradient step.
+    
     
     # Get the layer activations
     layer_activations = forward(network,X)
