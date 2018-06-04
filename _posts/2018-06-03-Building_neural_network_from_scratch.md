@@ -259,11 +259,8 @@ for i in range(4):
     plt.imshow(X_train[i].reshape([28,28]),cmap='gray');
 ```
 
-    Using TensorFlow backend.
-    
+<img src="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Building_neural_network_from_scratch/output_20_1.png" align ='center'>
 
-
-![png](output_20_1.png)
 
 
 We'll define network as a list of layers, each applied on top of previous one. In this setting, computing predictions and training becomes trivial.
@@ -385,7 +382,7 @@ for epoch in range(25):
     
 
 
-![png](output_27_1.png)
+<img src="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Building_neural_network_from_scratch/output_27_1.png" align ='center'>
 
 
 As we can see we have successfully trained a MLP which was purely written in numpy with high validation accuracy!
