@@ -21,7 +21,7 @@ Multi-layer perceptron is a type of network where multiple layers of a group of 
 <div align='right'>Image credit=https://commons.wikimedia.org/wiki/File:Perceptron.png/</div>
 
 Now, if we stack a bunch of these perceptrons together, it becomes a hidden layer which is also known as a Dense layer in modern deep learning terminology. <br/>
-<center>__Dense layer,__ <img src ="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Building_neural_network_from_scratch/eq_dense.png"></center> <br/>
+__Dense layer,__ <img src ="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Building_neural_network_from_scratch/eq_dense.png"> <br/>
 *Note that bias term is now a vector and W is a weight matrix* <br/>
 <img src="https://raw.githubusercontent.com/aayushmnit/Deep_learning_explorations/master/1_MLP_from_scratch/single_layer_mlp.png" align ='center'>
 <center>Fig: Single dense layer perceptron network</center> <br/>
@@ -34,7 +34,7 @@ Now we understand dense layer let's add a bunch of them, and that network become
 <div align='right'>Image credit=http://pubs.sciepub.com/ajmm/3/3/1/figure/2s</div>    
 
 If you have noticed our dense layer, only have linear functions, and any combination of linear function only results in the linear output. As we want our MLP to be flexible and learn non-linear decision boundaries, we also need to introduce non-linearity into the network. We achieve the task of introducing non-linearity by adding activation function. There are various kinds of activation function which can be used, but we will be implementing Rectified Linear Units(ReLu) which is one of the popular activation function. ReLU function is a simple function which is zero for any input value below zero and the same value for values greater than zero. <br/>
-<center>__ReLU function __ <img src="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Building_neural_network_from_scratch/eq_relu.png"></center>
+__ReLU function __ <img src="https://raw.githubusercontent.com/aayushmnit/aayushmnit.github.io/master/_posts/Building_neural_network_from_scratch/eq_relu.png">
 <br/>
 Now, we understand dense layer and also understand the purpose of activation function, the only thing left is training the network. For training a neural network we need to have a loss function and every layer should have a __feed-forward loop__ and __backpropagation loop__. Feedforward loop takes an input and generates output for making a prediction and backpropagation loop helps in training the model by adjusting weights in the layer to lower the output loss. In backpropagation, the weight update is done by using backpropagated gradients using the chain rule and optimized using an optimization algorithm. In our case, we will be using SGD(stochastic gradient descent). If you don't understand the concept of gradient weight updates and SGD, I recommend you to watch [week 1 of Machine learning by Andrew NG lectures](https://www.coursera.org/ml).
 
