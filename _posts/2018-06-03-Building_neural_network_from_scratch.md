@@ -7,7 +7,7 @@ tags:
   - Deep learning
 ---
 
-In this notebook, we are going to build a neural network(multilayer perceptron) using numpy and successfully train it to recognize digits in the image. Deep learning is a vast topic, but we got to start somewhere, so let's start with the very basics of a neural network which is Multilayer Perceptron. 
+In this notebook, we are going to build a neural network(multilayer perceptron) using numpy and successfully train it to recognize digits in the image. Deep learning is a vast topic, but we got to start somewhere, so let's start with the very basics of a neural network which is Multilayer Perceptron. You can find the same blog in notebook version [here](https://github.com/aayushmnit/Deep_learning_explorations/tree/master/1_MLP_from_scratch).
 
 ## What is a neural network?
 A neural network is a type of machine learning model which is inspired by our neurons in the brain where many neurons are connected with many other neurons to translate an input to an output (simple right?). Mostly we can look at any machine learning model and think of it as a function which takes an input and produces the desired output; it's the same with a neural network.
