@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Hello World! Welcome to Aayush Agrawal's personal website."
+title: "Welcome to Aayush Agrawal's website."
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -9,9 +9,9 @@ redirect_from:
 ---
 
 ### About me
-I am a data scientist with more than four years of experience in defining, creating and deploying data science solutions in business. I have graduated in Masters of Science in Business Analytics at Carlson School of Management, the University of Minnesota in May 2017 and started working at Land O'Lakes, Inc. as a Data scientist from June 2017. My current work involves evangelizing and implementing data science solutions in verticals like agricultural technology, CPG, e-commerce and animal feed business solving a variety of problems like customer 360, marketing mix attribution, up-sell/cross-sell initiatives, personalization, and machine vision. Prior to that, I have experience working in various verticals like pharmaceuticals, retail, e-commerce, and ride-sharing business model.
+I am a data scientist with more than five years of experience in defining, creating and deploying data science solutions in business. I have graduated in Masters of Science in Business Analytics at Carlson School of Management, the University of Minnesota in May 2017 and started working at Land O'Lakes, Inc. as a Data scientist from June 2017. My current work involves evangelizing and implementing data science solutions in verticals like agricultural technology, CPG, e-commerce and animal feed business solving a variety of problems like Customer 360, marketing mix attribution, Up-sell/Cross-sell initiatives, Personalization, and machine vision. Before that, I have experience working in various verticals like pharmaceuticals, retail, e-commerce, and ride-sharing business model.
 
-Kaggle Expert and among the Top - 1000 Kagglers in the world. Rank 3rd and moderator on analyticsvidhya.com by various top finishes in hackathons. I am also associated with local analytics community like Analyze This!, Minneanalytics and Social Data Science in Minneapolis and won various data science competitions solving highly challenging problems in lake water data, baseball analytics, national park data exploration and machine vision.
+Kaggle Expert and among the Top - 1000 Kagglers in the world. Rank 3rd and moderator on analyticsvidhya.com by various top finishes in hackathons. I am also associated with local analytics community like Analyze This!, Minneanalytics and Social Data Science in Minneapolis and won various data science competitions solving profoundly challenging problems in lake water data, baseball analytics, national park data exploration and machine vision.
 
 * **Analytics Tools:** Python, R, SAS, SQL, Hadoop (Hive, Pig, Sqoop), Spark, AWS, RapidMiner, Excel, ArcGIS, NiFi
 * **Visualization:** RShiny, Tableau, RMarkdown, Power BI
