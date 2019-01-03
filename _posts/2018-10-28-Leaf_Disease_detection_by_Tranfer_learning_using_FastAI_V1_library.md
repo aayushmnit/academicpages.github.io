@@ -7,4 +7,4 @@ tags:
   - Deep learning
 ---
 
-Blog Transferred to [Medium.com ](https://towardsdatascience.com/transfer-learning-using-the-fastai-library-d686b238213e).
+Blog Transferred to [Medium.com](https://towardsdatascience.com/transfer-learning-using-the-fastai-library-d686b238213e).

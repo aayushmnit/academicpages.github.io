@@ -7,4 +7,4 @@ tags:
   - Deep learning
 ---
 
-Blog Transferred to [Medium.com ](https://medium.com/@aayushmnit/multi-layer-perceptron-using-tensorflow-9f3e218a4809).
+Blog Transferred to [Medium.com](https://medium.com/@aayushmnit/multi-layer-perceptron-using-tensorflow-9f3e218a4809).
