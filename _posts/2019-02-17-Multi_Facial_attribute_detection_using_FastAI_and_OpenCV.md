@@ -1,6 +1,6 @@
 ---
 title: 'Real-time Multi-Facial attribute detection using computer vision and deep learning with FastAI and OpenCV'
-date: 2019-01-05
+date: 2019-02-17
 permalink: /posts/2019/02/Multi_Facial_attribute_detection_using_FastAI_and_OpenCV/
 tags:
   - Machine learning
