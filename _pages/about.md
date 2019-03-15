@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Welcome to Aayush Agrawal's website."
+title: "Welcome To My Professional Page"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -9,15 +9,12 @@ redirect_from:
 ---
 
 ### About me
-I am a data scientist with more than five years of experience in defining, creating and deploying data science solutions in business. I have graduated in Masters of Science in Business Analytics at Carlson School of Management, the University of Minnesota in May 2017 and started working at Land O'Lakes, Inc. as a Data scientist from June 2017. My current work involves evangelizing and implementing data science solutions in verticals like agricultural technology, CPG, e-commerce and animal feed business solving a variety of problems like Customer 360, marketing mix attribution, Up-sell/Cross-sell initiatives, Personalization, and machine vision. Before that, I have experience working in various verticals like pharmaceuticals, retail, e-commerce, and ride-sharing business model.
+I am Aayush Agrawal currently working as a Senior Data Scientist with Land O'Lakes,Inc in Minneapolis, Minnesota. I'm an experienced Data Scientist with specialized skills in machine learning, deep learning, data analysis, and business communication. I enjoy staying on top of cutting edge data technologies including big data platforms, deep learning, optimization methods, and business analytics. My current work involves evangelizing, leading and implementing data science solutions in verticals like agricultural technology, CPG, e-commerce and animal feed business solving a variety of problems like Commodity forecasting, customer 360, marketing mix attribution, up-sell/cross-sell initiatives, personalization, and machine vision. Before that, I have experience working in various verticals like pharmaceuticals, retail, e-commerce, and ride-sharing business model.
 
-Kaggle Expert and among the Top - 1000 Kagglers in the world. Rank 3rd and moderator on analyticsvidhya.com by various top finishes in hackathons. I am also associated with local analytics community like Analyze This!, Minneanalytics and Social Data Science in Minneapolis and won various data science competitions solving profoundly challenging problems in lake water data, baseball analytics, national park data exploration and machine vision.
-
-* **Analytics Tools:** Python, R, SAS, SQL, Hadoop (Hive, Pig, Sqoop), Spark, AWS, RapidMiner, Excel, ArcGIS, NiFi
-* **Visualization:** RShiny, Tableau, RMarkdown, Power BI
-* **Statistical Techniques:** Linear regression, Logistic regression, Ridge, Lasso regression, Random Forest, Gradient boosted trees, Xgboost, Neural networks, Time Series Modeling (ARIMA, ARIMAX, Seasonal, time series models), Deep learning, Recommender Systems, Clustering, Topic Modeling, LDA, Bayesian inference, and modeling
+Recently, I have taken up the Cutting Edge Deep Learning class of fast.ai at University of San Francisco and I am keen on taking up interesting challenges in this space.
 
 ### Media Mentions
 * **[appleforA interview](https://applefora.com/blog/data-science-combination-math-business-technology/)**
 * **[MSBA Team Shows Prowess in Analyzing Baseball Stats](https://carlsonschool.umn.edu/news/msba-team-shows-prowess-in-analyzing-baseball-stats)**
 * **[Diving into water data: The outcomes of MinneMUDAC](http://minneanalytics.org/diving-into-water-data-the-outcomes-of-minnemudac/)**
+* **[Carlson Alumni Magazie](https://www.minnesotaalumni.org/stories/welcome-to-the-future)**

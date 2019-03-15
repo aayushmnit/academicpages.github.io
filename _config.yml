@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Aayush Agrawal's website"
+title                    : "Welcome to my professional page | Aayush Agrawal"
 title_separator          : "-"
 name                     : &name "Aayush Agrawal"
 description              : &description "I am a Data scientist"
@@ -80,7 +80,7 @@ analytics:
 author:
   name             : "Aayush Agrawal"
   avatar           : "profile.jpg"
-  bio              : "I am a data scientist focused on solving business problems using data and math."
+  bio              : "I am a data scientist focused on solving interesting problems using data."
   location         : "Minneapolis, Minnesota, USA"
   employer         : "Land O' Lakes, Inc."
   googlescholar    : 
