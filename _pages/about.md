@@ -17,4 +17,4 @@ Recently, I have taken up the Cutting Edge Deep Learning class of fast.ai at Uni
 * **[appleforA interview](https://applefora.com/blog/data-science-combination-math-business-technology/)**
 * **[MSBA Team Shows Prowess in Analyzing Baseball Stats](https://carlsonschool.umn.edu/news/msba-team-shows-prowess-in-analyzing-baseball-stats)**
 * **[Diving into water data: The outcomes of MinneMUDAC](http://minneanalytics.org/diving-into-water-data-the-outcomes-of-minnemudac/)**
-* **[Carlson Alumni Magazie](https://www.minnesotaalumni.org/stories/welcome-to-the-future)**
+* **[Carlson Alumni Magazine](https://www.minnesotaalumni.org/stories/welcome-to-the-future)**
