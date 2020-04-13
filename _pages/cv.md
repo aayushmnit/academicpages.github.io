@@ -16,11 +16,21 @@ Education
 
 Work experience
 ======
+* **Microsoft, Redmond, WA**
+	* **Data Scientist II,                              		06/19 – Present** <br />
+		* I am working at the intersection of M365 business marketing and engineering. Building data-driven products to enable smarter recommendations for admins and end-users to ensure the best usage of M365 services. (Think churn, upsell, next best action recommendations, propensity models).
+		* Hack4Good(Volunteering) - Working with Orca Conservancy(non-profit) to build a bioacoustic call recognition and alerting system for Southern resident killer whales (Orcas). This hack project won the Microsoft AI4Good grant, which provided $30K in azure credits for a year.
 * **Land O’ Lakes Inc., Shoreview, MN**
-	* **Data scientist – Big Data,                              	06/17 – Present**
-		* Built a machine learning based targeting strategy for finding the best operators to target out of 1.6 Million operators, leading to 7x increase on sales returns from the previously used method using Python, Hive, Power BI and Apache NiFi
-		* Running marketing mix models for animal feed categories to understand effectiveness of various marketing activities
-		* Working on data collection and image processing process to solve image vision problems using Deep learning in multiple use cases relating to tracking sustainability practices and animal health
+	* **Sr. Data Scientist,                              		09/18 – 06/19** <br />
+		Leading an agile team of Data scientists and engineers to deliver data solutions which include -
+		* Providing commodity forecast for Non-Fat dry milk spot price in the futures market which results in $700K savings annually by improved forecast (4 cents) and risk management decisions
+		* Built prediction model for proactively identifying SKUs at risk in any retail store for both our own and competitors product, leading to an annual benefit of $0.5MM - $0.7 MM on proactive corrective actions
+		* Built a customized bid pricing model for K-12 schools by analyzing past bidding data with the potential of increased profit of $4.5MM
+	* **Data scientist,       	                       			06/17 – 09/18**
+		* Built a machine learning based targeting strategy for finding the best operators(restaurants/chain/hospitals/universities/k-12) to focus out of 1.6 Million operators, leading to increases in conversion rate by 6% and $1.5MM in additional profits
+		* Built Image collection, processing, and prediction pipelines to solve machine vision problems using Deep learning in multiple use cases relating to tracking sustainability practices using satellite imageries and predicting herd animal health scores
+		* Designed AI in E-commerce strategy to build use cases around personalization for various parts of e-commerce websites like user-item recommendations, item-item recommendation, email targeting, cross-sell/up-sell, etc
+		* Running marketing mix models for animal feed categories to understand the effectiveness of various marketing activities
 	* **Data Science Intern,                                     01/17 – 05/17**
 		* Enhancing corn yields for farmers by improving seed recommendations using a customized growing condition based similarity metrics devised by combining open source datasets for over 2.07 million farms using Python and ArcGIS
 
