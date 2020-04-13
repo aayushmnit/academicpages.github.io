@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Welcome to my professional page | Aayush Agrawal"
+title                    : "Aayush's Site"
 title_separator          : "-"
 name                     : &name "Aayush Agrawal"
 description              : &description "I am a Data scientist"
