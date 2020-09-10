@@ -17,8 +17,9 @@ Education
 Work experience
 ======
 * **Microsoft, Redmond, WA**
-	* **Data Scientist II,                              		06/19 – Present** <br />
-		* I am working at the intersection of M365 business marketing and engineering. Building data-driven products to enable smarter recommendations for admins and end-users to ensure the best usage of M365 services. (Think churn, upsell, next best action recommendations, propensity models).
+	* **Senior Data Scientist,                              	09/20 – Present** <br />
+	* **Data Scientist II,                              		06/19 – 09/20** <br />
+		* I am working at the intersection of M365 business marketing and engineering. Building data-driven products to enable smarter recommendations for SMB admins and end-users to ensure the best usage of M365 services. (Think churn, upsell, next best action recommendations, propensity models).
 		* Hack4Good(Volunteering) - Working with Orca Conservancy(non-profit) to build a bioacoustic call recognition and alerting system for Southern resident killer whales (Orcas). This hack project won the Microsoft AI4Good grant, which provided $30K in azure credits for a year.
 * **Land O’ Lakes Inc., Shoreview, MN**
 	* **Sr. Data Scientist,                              		09/18 – 06/19** <br />
